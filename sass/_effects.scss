@@ -1,0 +1,181 @@
+// menu hover on section homeboy
+
+.homeboy {
+	&-slime {
+		animation: bg-slime 10s linear infinite alternate
+	}
+	&__list {
+		&-link {
+			padding: 6px;
+			span {
+				position: relative;
+				overflow: hidden;
+				transition: 0.6s;
+				.oyr {
+					display: inline-flex;
+				}
+				.iyr {
+					position: absolute;
+					color: #af8;
+					left: 0;
+					opacity: 0;
+					transform: translateX(100%);
+				}
+			}
+			&:hover {
+				span {
+				  .oyr {
+				    opacity: 0;
+				    transform: translateX(-100%);
+				  }
+
+				  .iyr {
+				    opacity: 1;
+				    transform: translateX(0);
+				  }
+				}
+			}
+		}
+	}
+}
+
+.homeboy-right__link {
+	transition: 0.25s ease-in-out;
+	&:hover {
+		color: #fea100;
+	}
+}
+
+
+.menuhomes_btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  background-color: #fff;
+  transition: 0.4s ease-in-out;
+  position: relative;
+
+  span {
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 2px;
+    display: block;
+    background-color: #222;
+
+    &::before, &::after {
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      left: calc(50% - 10px);
+      width: 20px;
+      height: 2px;
+      display: block;
+      background-color: #222;
+    }
+
+    &::before, &::after {
+      content: '';
+      transition: 0.4s;
+      background-color: #222;
+    }
+
+    &::before {
+      transform: translateY(-6px);
+    }
+
+    &::after {
+      transform: translateY(6px);
+    }
+  }
+}
+
+.menuhomes_btn-active {
+
+	transform: rotate(180deg);
+	background-color: #fea100;
+}
+
+.menuhomes_btn-active span {
+  &::before {
+    transform: rotate(35deg);
+    width: 12px;
+    transform-origin: left bottom;
+  }
+
+  &::after {
+    transform: rotate(-35deg);
+    width: 12px;
+    transform-origin: left top;
+  }
+
+}
+
+.menuhomes img {
+	max-width: 15px;
+	display: block;
+}
+
+.menuhomes a {
+  color: #222;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #af8;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+
+  &:nth-child(1) {
+    transition-delay: 0.2s;
+  }
+
+  &:nth-child(2) {
+    transition-delay: 0.6s;
+  }
+
+  &:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+}
+
+.menuhomes_active a {
+  &:nth-child(1) {
+    z-index: 1;
+    transform: translate(-15px, -80px);
+  }
+
+  &:nth-child(2) {
+    z-index: 1;
+    transform: translate(-80px, -15px);
+  }
+
+  &:nth-child(3) {
+    z-index: 1;
+    transform: translate(-80px, -80px);
+  }
+}
+
+@keyframes bg-slime {
+	0% {
+		background-position: 50px 0
+	}
+	100% {
+		background-position: 350px 0
+	}
+}
+
+

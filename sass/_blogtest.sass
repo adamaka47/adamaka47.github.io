@@ -1,0 +1,303 @@
+.main-section
+  padding: 50px 30px
+  position: relative
+  min-height: 100vh
+  background-color: 000
+  transition: 0.5s ease-in-out
+  background-color: #fea100
+  .container
+    display: flex
+    justify-content: space-between
+
+
+.menuted
+  position: absolute
+  z-index: 5
+  margin: 0 auto
+  color: #fff
+  width: 210px
+  display: inline-block
+  left: 2%
+
+.main-section__bg
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  transition: 0.5s ease-in-out
+  opacity: 1
+  background-color: #222
+
+.bg
+  position: absolute
+  width: 100%
+  height: 100%
+  display: none
+  transition: 2s ease-in-out
+  z-index: 2
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+
+  &.ents
+    display: block
+    color: #fff
+    font-size: 18px
+    padding-top: 55px
+    z-index: 5
+    position: relative
+
+.bg-1
+  background-color: #222
+
+.bg-2
+  background-color: #012
+
+.bg-3
+  background-color: #102
+
+.bg-4
+  background-color: #001100
+
+.trf
+  transform: translateZ(-2500px) rotate(-50deg)
+  transform-style: preserve-3d
+  transition: 0.7s ease-in-out
+
+.ps
+  perspective: 800px
+
+.ents__text
+  font-size: 18px
+  color: #af8
+  line-height: 1.4
+  margin: 0
+  max-width: 420px
+  min-height: 110px
+
+.sec-post__link
+  display: block
+  color: #fff
+  max-width: 200px
+  text-decoration: none
+  padding: 7px 10px
+  margin-bottom: 30px
+  border-bottom: 2px solid #fff
+  position: relative
+
+.link-last
+  margin-bottom: 0
+
+.sec-post__link
+  &::last-child
+    margin-bottom: 0
+
+  span
+    font-weight: 900
+    font-size: 20px
+
+  &.active
+    background-color: #fff
+    color: #111
+    border-bottom: 2px solid #ff0036
+
+.ops
+  opacity: 0
+  transition: 0.4s
+
+.about-img
+  width: 420px
+  position: relative
+  z-index: 2
+  height: 540px
+  margin-top: 0
+
+  &::after, &::before
+    content: ''
+    position: absolute
+    border-radius: 15px
+    left: -2px
+    top: -2px
+    width: calc(100% + 4px)
+    height: calc(100% + 4px)
+    background-image: linear-gradient(45deg, indigo, #0000ff, #fea100, #af8, #ff0036, indigo, #0000ff, #fea100, #af8, #ff0036)
+    background-size: 400%
+    z-index: -1
+    -webkit-animation: bxsd 20000ms linear infinite
+    animation: bxsd 20000ms linear infinite
+
+  &::after
+    -webkit-filter: blur(5px)
+    filter: blur(5px)
+
+  .card
+    width: 98%
+    height: 98%
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+
+    &::after
+      content: 'Hover me'
+      position: absolute
+      top: 0
+      left: 0
+      background-color: #000
+      color: #fff
+      font-family: monospace
+      padding: 10px
+      font-size: 20px
+      border-radius: 4px
+      z-index: 1
+      border-radius: 5px
+      -webkit-animation: bxsd 20000ms linear infinite
+      animation: bxsd 20000ms linear infinite
+
+    &:hover
+      .front
+        -webkit-transform: perspective(600px) rotateY(-180deg)
+        transform: perspective(600px) rotateY(-180deg)
+
+      .back
+        -webkit-transform: perspective(600px) rotateY(0)
+        transform: perspective(600px) rotateY(0)
+
+  .front, .back
+    width: 100%
+    height: 100%
+    overflow: hidden
+    position: absolute
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+    -webkit-transition: transform 0.4s ease-in-out
+    -webkit-transition: -webkit-transform 0.4s ease-in-out
+    transition: -webkit-transform 0.4s ease-in-out
+    transition: transform 0.4s ease-in-out
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out
+    background: -webkit-gradient(linear, left top, left bottom, from(#d6d6d6), to(#f2f2f2))
+    background: linear-gradient(#d6d6d6, #f2f2f2)
+    border-radius: 15px
+
+  .front
+    -webkit-transform: perspective(600px) rotateY(0)
+    transform: perspective(600px) rotateY(0)
+
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background: url("../img/m.jpg") (center / cover) no-repeat
+
+  .back
+    -webkit-transform: perspective(600px) rotateY(180deg)
+    transform: perspective(600px) rotateY(180deg)
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: -webkit-box
+    display: flex
+    -webkit-box-pack: center
+    justify-content: center
+    -ms-align-items: center
+    -webkit-box-align: center
+    align-items: center
+    text-align: center
+    background: #000
+    z-index: 2
+
+    h1
+      color: #fff
+      font-size: 32px
+      font-weight: 900
+
+      span
+        display: block
+        font-size: 20px
+        font-weight: 300
+        margin: 7px 0
+        color: #fff
+
+    .soc
+      list-style-type: none
+      display: -moz-inline-flex
+      display: -ms-inline-flex
+      display: -o-inline-flex
+      display: -webkit-inline-box
+      display: inline-flex
+      -webkit-box-pack: justify
+      justify-content: space-between
+
+      a
+        margin: 0 5px
+        color: #af8
+        text-decoration: none
+        width: 40px
+        height: 40px
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: -webkit-box
+        display: flex
+        -webkit-box-pack: center
+        justify-content: center
+        -ms-align-items: center
+        -webkit-box-align: center
+        align-items: center
+        font-size: 24px
+        border-radius: 50%
+        -webkit-transition: 0.4s ease
+        transition: 0.4s ease
+
+        &:hover
+          background-color: #222
+          color: aqua
+
+
+@media (max-width: 650px)
+  .main-section
+    padding: 40px 20px
+
+  .bg
+    padding-right: 0
+
+    &.ents
+      padding-top: 320px
+      padding-left: 0
+
+  .ents__text
+    padding: 0 25px
+    font-size: 16px
+
+  .sec-post__link
+    margin-bottom: 25px
+
+    span
+      font-size: 18px
+
+@media (max-height: 568px)
+  .bg
+    min-height: 570px
+
+
+@media (max-width: 1763px)
+  .main
+    &-section
+      .container
+        padding: 0 140px
+      .menuted
+        left: 1%
+
+@media (max-width: 1435px)
+  .main
+    &-section
+      .container

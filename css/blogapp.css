@@ -1,0 +1,106 @@
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+::-moz-selection {
+  background-color: #fea100; }
+
+::selection {
+  background-color: #fea100; }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #af8;
+  background-color: #000;
+  font-family: monospace, 'Tahoma', sans-serif; }
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px; }
+
+.header {
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  position: relative; }
+  .header__title {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    z-index: 4; }
+  .header .wrapper {
+    background: url("../img/worst.gif") center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; }
+    .header .wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 17, 0.9);
+      -webkit-animation: bganims 20s infinite ease-in-out backwards;
+      animation: bganims 20s infinite ease-in-out backwards;
+      z-index: -1; }
+
+@-webkit-keyframes bganims {
+  0, 100% {
+    background-color: rgba(0, 0, 17, 0.8); }
+  20% {
+    background-color: rgba(17, 0, 0, 0.7); }
+  40% {
+    background-color: rgba(17, 0, 0, 0.7); }
+  60% {
+    background-color: rgba(0, 0, 17, 0.8); }
+  80% {
+    background-color: rgba(17, 0, 0, 0.99); } }
+
+@keyframes bganims {
+  0, 100% {
+    background-color: rgba(0, 0, 17, 0.8); }
+  20% {
+    background-color: rgba(17, 0, 0, 0.7); }
+  40% {
+    background-color: rgba(17, 0, 0, 0.7); }
+  60% {
+    background-color: rgba(0, 0, 17, 0.8); }
+  80% {
+    background-color: rgba(17, 0, 0, 0.99); } }
+
+.days {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  background-color: #000;
+  z-index: 5;
+  position: relative; }
+  .days-item {
+    border-bottom: 1px solid #ff0036;
+    padding-bottom: 50px;
+    margin-top: 50px; }
+    .days-item__date {
+      font-size: 20px;
+      margin-bottom: 20px;
+      display: block; }
+    .days-item__name {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 25px; }
+    .days-item__descrday {
+      font-size: 17px;
+      line-height: 1.4; }
+
+@media (max-width: 576px) {
+  .header__title {
+    font-size: 36px; } }

@@ -1,0 +1,296 @@
+.form
+  background-color: #000
+  border-bottom: 1px solid #fea100
+  position: relative
+  z-index: 2
+  &::after
+    content: ''
+    background-image: url('../img/1.png'), url('../img/3.png'), url('../img/2.png')
+    animation: snow 20s linear infinite
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+  button
+    text-decoration: none
+    color: aqua
+    display: block
+    width: 240px
+    background-color: transparent
+    border: none
+    text-align: center
+    padding: 20px 0
+    letter-spacing: 1.7px
+    text-transform: uppercase
+    font-size: 24px
+    box-shadow: 0 10px 5px aqua
+    position: relative
+    overflow: hidden
+    z-index: 2
+    margin: auto
+    margin-top: 50px
+    transition: box-shadow 0.4s ease-in-out
+    &:hover
+      box-shadow: 0 0px 5px aqua
+
+    &::before
+      content: ''
+      position: absolute
+      top: 2px
+      left: 2px
+      bottom: 2px
+      width: 50%
+      background-color: rgba(#af8, 0.1)
+      z-index: -1
+
+    span
+      &:nth-child(1)
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 2px
+        animation: an1 2s infinite
+        background: linear-gradient(to right, #222, aqua)
+
+      &:nth-child(2)
+        position: absolute
+        top: 0
+        right: 0
+        width: 2px
+        height: 100%
+        animation: an2 2s infinite
+        background: linear-gradient(to bottom, #222, aqua)
+        animation-delay: 1s
+        -webkit-transform: translateY(-100%)
+        -ms-transform: translateY(-100%)
+        -o-transform: translateY(-100%)
+        transform: translateY(-100%)
+
+      &:nth-child(3)
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 2px
+        width: 100%
+        background: linear-gradient(to left, #222, aqua)
+        animation: an3 2s infinite
+
+      &:nth-child(4)
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 2px
+        background: linear-gradient(to top, #222, aqua)
+        animation: an4 2s infinite
+        animation-delay: 1s
+        -webkit-transform: translateY(100%)
+        -ms-transform: translateY(100%)
+        -o-transform: translateY(100%)
+        transform: translateY(100%)
+
+  @keyframes an1
+    0%
+      -webkit-transform: translateX(-100%)
+      -ms-transform: translateX(-100%)
+      -o-transform: translateX(-100%)
+      transform: translateX(-100%)
+
+    100%
+      -webkit-transform: translateX(100%)
+      -ms-transform: translateX(100%)
+      -o-transform: translateX(100%)
+      transform: translateX(100%)
+
+  @keyframes an2
+    0%
+      -webkit-transform: translateY(-100%)
+      -ms-transform: translateY(-100%)
+      -o-transform: translateY(-100%)
+      transform: translateY(-100%)
+
+    100%
+      -webkit-transform: translateY(100%)
+      -ms-transform: translateY(100%)
+      -o-transform: translateY(100%)
+      transform: translateY(100%)
+
+  @keyframes an3
+    0%
+      -webkit-transform: translateX(100%)
+      -ms-transform: translateX(100%)
+      -o-transform: translateX(100%)
+      transform: translateX(100%)
+
+    100%
+      -webkit-transform: translateX(-100%)
+      -ms-transform: translateX(-100%)
+      -o-transform: translateX(-100%)
+      transform: translateX(-100%)
+
+  @keyframes an4
+    0%
+      -webkit-transform: translateY(100%)
+      -ms-transform: translateY(100%)
+      -o-transform: translateY(100%)
+      transform: translateY(100%)
+
+    100%
+      -webkit-transform: translateY(-100%)
+      -ms-transform: translateY(-100%)
+      -o-transform: translateY(-100%)
+      transform: translateY(-100%)
+
+
+  &-flex
+    display: flex
+    align-items: flex-start
+    justify-content: space-around
+    margin-bottom: 25px
+  &-ints
+  	&__item
+  		position: relative
+  		width: 100%
+  		margin-bottom: 10px
+  		&:last-child
+  			margin-bottom: 0
+  	&__text
+  		height: 380px
+
+  input
+    width: 100%
+    height: 50px
+    color: #af8
+    padding-top: 10px
+    font-size: 18px
+    border: none
+    outline: none
+    background-color: transparent
+    display: inline-block
+  input.last
+    padding-left: 10%
+
+  textarea
+    width: 100%
+    height: 100%
+    color: #af8
+    padding-top: 10px
+    font-size: 18px
+    border: none
+    outline: none
+    background-color: transparent
+    resize: none
+    display: block
+    padding-top: 20px
+    margin-top: 20px
+
+
+.label-text
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	pointer-events: none
+	border-bottom: 1px solid #777
+	overflow: hidden
+	&::after
+	  content: ''
+	  position: absolute
+	  left: 0
+	  bottom: 0px
+	  height: 100%
+	  width: 100%
+	  border-bottom: 3px solid aqua
+	  -webkit-transform: translateX(-100%)
+	  -ms-transform: translateX(-100%)
+	  -o-transform: translateX(-100%)
+	  transform: translateX(-100%)
+	  -webkit-transition: 0.8s
+	  -o-transition: 0.8s
+	  transition: 0.8s
+
+
+.label-item
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 90%
+  height: 100%
+  pointer-events: none
+  border-bottom: 1px solid #777
+  overflow: hidden
+  &_last
+    margin-left: 10%
+
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0px
+    height: 100%
+    width: 100%
+    border-bottom: 3px solid aqua
+    -webkit-transform: translateX(-100%)
+    -ms-transform: translateX(-100%)
+    -o-transform: translateX(-100%)
+    transform: translateX(-100%)
+    -webkit-transition: 0.8s
+    -o-transition: 0.8s
+    transition: 0.8s
+
+.text-descr
+  font-weight: 300
+  position: absolute
+  bottom: 5px
+  font-size: 20px
+  left: 0
+  -webkit-transition: 0.4s ease-in-out
+  -o-transition: 0.4s ease-in-out
+  transition: 0.4s ease-in-out
+.text-area
+	@extend .text-descr
+	top: 0
+	bottom: auto
+
+.form input
+  &:focus + .label-item .text-descr, &:valid + .label-item .text-descr
+    transform: translateY(-150%)
+    font-size: 14px
+    color: aqua
+
+  &:focus + .label-item::after, &:valid + .label-item::after
+    -webkit-transform: translateX(0%)
+    -ms-transform: translateX(0%)
+    -o-transform: translateX(0%)
+    transform: translateX(0%)
+
+
+.form textarea
+
+	&:focus + .label-text .text-area, &:valid + .label-text .text-area
+	  transform: translateY(-20%)
+	  font-size: 14px
+	  color: aqua
+
+	&:focus + .label-text::after, &:valid + .label-text::after
+	  -webkit-transform: translateX(0%)
+	  -ms-transform: translateX(0%)
+	  -o-transform: translateX(0%)
+	  transform: translateX(0%)
+
+
+@media (max-width: 420px)
+  .form
+    &-ints
+      &__text
+        height: 290px
+    input
+      font-size: 15px
+    .text-descr
+      font-size: 15px
+    button
+      font-size: 20px

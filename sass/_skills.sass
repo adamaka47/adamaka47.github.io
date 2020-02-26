@@ -1,0 +1,140 @@
+.skills
+	padding-bottom: 60px
+	&-items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 40px
+	&-circle
+		position: relative
+		svg
+			display: block
+			margin: 0 auto
+		&__num
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			font-family: monospace
+			font-size: 24px
+	&-item
+		flex-basis: 22%
+		padding: 20px 15px 10px
+		box-shadow: 0 0px 10px #ddd, inset 0 3px 5px #aaa, 0 0px 5px #999, inset 0 0 10px #999
+		box-shadow: 7px 7px 10px -10px aqua, -7px -7px 10px -10px aqua
+		transition: all 0.4s
+		margin-bottom: 40px
+		&:hover
+			box-shadow: 5px 5px 7px -2px aqua, -5px -5px 7px -2px aqua
+
+
+		&__title
+			text-align: center
+			font-size: 20px
+			color: #af8
+			text-shadow: 0 0px 1px
+			margin: 25px 0 15px
+			font-weight: 900
+			letter-spacing: 1px
+		&__text
+			line-height: 1.7
+			text-align: center
+			color: #eee
+
+	&-technologies
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		transform: preserve-3d
+		perspective: 1200px
+		padding: 0 20px
+	&-tech
+		flex-basis: 30%
+		margin-bottom: 40px
+		background-color: #000
+		padding: 18px
+		min-height: 255px
+		border-radius: 10px
+		box-shadow: 0 0 10px gold
+		transition: 0.4s
+		transform: skewX(3deg)
+		&:hover
+			box-shadow: 0 0 20px gold
+			.skills-tech__title
+				text-shadow: 0 0 10px aqua
+		&:nth-child(n+4)
+			transform: skewX(-3deg)
+			.skills-tech__title, .skills-tech__descr, .skills-tech__img
+				transform: skewX(3deg)
+
+		&__img
+			width: 50px
+			height: 58px
+			transform: skewX(-3deg)
+			svg
+				width: 100%
+				height: 100%
+		&__title
+			margin: 0
+			margin-top: 20px
+			font-size: 20px
+			color: aqua
+			transform: skewX(-3deg)
+		&__descr
+			margin: 0
+			margin-top: 15px
+			font-size: 15px
+			line-height: 1.6
+			color: #af8
+			transform: skewX(-3deg)
+
+
+@media (max-width: 1070px)
+	.skills
+		&-item
+			flex-basis: 45%
+			&:last-child
+				.skills-item__text
+					margin-bottom: 30px
+			&__text
+				max-width: 550px
+				margin: auto
+				margin-bottom: 45px
+
+@media (max-width: 825px)
+	.skills
+		&-items
+			flex-direction: column
+			align-items: center
+			padding: 0 25px
+		&-item
+			max-width: 420px
+			padding-left: 12px
+			padding-right: 12px
+		&-technologies
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			padding: 0 25px
+		&-tech
+			max-width: 420px
+			flex-basis: 100%
+			padding: 15px
+			min-height: auto
+
+
+@media (max-width: 576px)
+	.skills
+		padding-bottom: 35px
+		&-item
+			&__text
+				font-size: 15px
+
+@media (max-width: 420px)
+	.skills
+		&-items
+			padding: 0
+		&-technologies
+			padding: 0
+
+	

@@ -1,0 +1,108 @@
+.mobile
+	position: fixed
+	top: 0
+	left: -100%
+	width: 100%
+	z-index: 9
+	height: 100vh
+	background-color: rgba(0,0,0,0.95)
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: 2s ease-in-out
+	&-list
+		position: relative
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		-webkit-flex-direction: column
+		-moz-flex-direction: column
+		-ms-flex-direction: column
+		-o-flex-direction: column
+		flex-direction: column
+		list-style-type: none
+		&__item
+			transition: 550ms
+			&:last-child .mobile-list__link
+				margin-bottom: 0
+		&__link
+			position: relative
+			text-decoration: none
+			text-transform: uppercase
+			font-weight: 900
+			letter-spacing: 2.5px
+			font-size: 48px
+			padding: 0 10px
+			line-height: 1.4
+			color: transparent
+			display: inline-block
+			overflow: hidden
+			margin-bottom: 15px
+			text-align: center
+
+			&::before
+				content: attr(data-name)
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				padding: 0 10px
+				-webkit-text-stroke: 1px #fff
+				transform: translateX(0)
+				-webkit-transition: 550ms
+				-o-transition: 550ms
+				transition: 550ms
+				visibility: visible
+
+			&:hover::before
+				-webkit-transform: translateX(100%)
+				-ms-transform: translateX(100%)
+				-o-transform: translateX(100%)
+				transform: translateX(100%)
+				opacity: 0
+				visibility: hidden
+
+			&::after
+				content: attr(data-name)
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				padding: 0 10px
+				-webkit-text-stroke: 1px #fff
+				transform: translateX(-100%)
+				-webkit-transition: 550ms
+				-o-transition: 550ms
+				transition: 550ms
+				opacity: 0
+				visibility: hidden
+				color: #af8
+
+			&:hover::after
+				-webkit-transform: translateX(0%)
+				-ms-transform: translateX(0%)
+				-o-transform: translateX(0%)
+				transform: translateX(0%)
+				visibility: visible
+				opacity: 1
+
+
+.mobile.mobiled
+	left: 0
+
+
+@media (min-width: 1070px)
+	.mobile
+		&-list
+			&__link
+				font-size: 60px
+
+@media (max-width: 825px)	
+	.mobile
+		&-list
+			&__link
+				font-size: 32px
