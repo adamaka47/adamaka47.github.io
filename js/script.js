@@ -52,18 +52,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 
 
-    function extendss() {
-        var now = new Date,
-            purpose = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0),
-            msBetween = Math.floor((purpose - now) / 1e3),
-            days = Math.floor(msBetween / 86400),
-            lastTime01 = msBetween % 86400,
-            hours = Math.floor(lastTime01 / 3600),
-            lastTime = lastTime01 % 3600,
-            minutes = Math.floor(lastTime / 60),
-            seconds = lastTime % 60;
-        document.querySelector(".purposes-time__days").innerHTML = '<span class="firstN">'.concat(addZero(days)[0], "</span>").concat(addZero(days)[1]), document.querySelector(".purposes-time__hours").innerHTML = '<span class="firstN">'.concat(addZero(hours)[0], "</span>").concat(addZero(hours)[1]), document.querySelector(".purposes-time__mins").innerHTML = '<span class="firstN">'.concat(addZero(minutes)[0], "</span>").concat(addZero(minutes)[1]), document.querySelector(".purposes-time__sec").innerHTML = '<span class="firstN">'.concat(addZero(seconds)[0], "</span>").concat(addZero(seconds)[1])
-    }
+
 
     function cartOut(e, x) {
         event.target.style.transform = "skewX(".concat(x, "deg) rotateX(0) rotateY(0)")
@@ -158,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
         item.addEventListener("mousemove", cartMoveSec), item.addEventListener("mouseleave", function(e) {
             cartOut(0, -3)
         })
-    }), extendss(), setInterval(extendss, 1e3);
+    });
     var spanText = document.querySelector(".about-info__title span"),
         wordsArr = ["словечек...", "слов...", "описаний...", "random..."],
         delTyping = 150,
@@ -290,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     }), document.onscroll = function(e) {
         var needHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight,
             scrollTop = document.documentElement.scrollTop;
-        document.querySelector(".about").offsetTop - 550 < scrollTop && (document.querySelector(".about-info__text").style.transform = "translateX(0px)", document.querySelector(".about-info__text").style.visibility = "visible", document.querySelector(".about-info__text").style.opacity = "1"), document.querySelector(".team").offsetTop - 420 < scrollTop && wowAnim(".team_items"), document.querySelector(".purposes-list").transform = "translateX(".concat(document.documentElement.scrollTop / 10, ")"), document.querySelector(".skills").offsetTop - 570 < scrollTop && b && (b = !1, span.forEach(function(item) {
+        document.querySelector(".about").offsetTop - 550 < scrollTop && (document.querySelector(".about-info__text").style.transform = "translateX(0px)", document.querySelector(".about-info__text").style.visibility = "visible", document.querySelector(".about-info__text").style.opacity = "1"), document.querySelector(".team").offsetTop - 420 < scrollTop && wowAnim(".team_items"), document.querySelector(".skills").offsetTop - 570 < scrollTop && b && (b = !1, span.forEach(function(item) {
             var a = setInterval(function() {
                 i <= parseInt(item.dataset.num) ? (item.innerHTML = i + "%", item.parentElement.querySelector(".ring__circle").style.strokeDashoffset = circumFerence - i / 100 * circumFerence, i++) : clearInterval(a)
             }, 140);
