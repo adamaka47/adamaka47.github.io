@@ -1,0 +1,132 @@
+.portfolio
+  &__title
+    padding-bottom: 15px
+    border-bottom: 1px solid #af8
+  &-list
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 20px
+    grid-row-gap: 5vmin
+    justify-items: center
+    &__img, &__frame, &__title
+      position: absolute
+      pointer-events: none
+      transform: translate3d(0, 0, 0)
+      transition: transform 0.7s linear
+    &__img
+      filter: grayscale(1)
+      transition: 0.25s
+      background-position: center
+      background-size: cover
+      &_1
+        background-image: url('../img/worst.gif')
+      &_2
+        background-image: url('../img/azat.jpg')
+      &_3
+        background-image: url('../img/blog3.jpg')
+      &_4
+        background-image: url('../img/blog2.jpg')
+      &_5
+        background-image: url('../img/blog4.jpg')
+      &_6
+        background-image: url('../img/blog2.jpg')
+    &__frame, &__img
+      display: block
+      width: 62%
+      height: 62%
+    &__link
+      text-decoration: none
+      color: #af8
+      margin: 0
+      font-family: monospace, serif
+      text-align: center
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 90%
+      height: 90%
+      transform-style: preserve-3d
+    &__title
+      margin: 0
+      padding: 24px
+      bottom: 0%
+      font-size: 24px
+    &__item
+      text-align: center
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 50vmin
+      height: 50vmin
+      transform-style: preserve-3d
+      &:hover .portfolio-list__img
+        filter: grayscale(0)
+
+    
+@media (max-width: 1060px)
+  .portfolio
+    &-list
+      &__item
+        width: 45vmin
+        height: 45vmin
+      &__title
+        bottom: -5%
+        font-size: 22px
+
+
+@media (max-width: 625px)
+  .portfolio
+    &-list
+      grid-template-columns: 1fr
+      grid-row-gap: 40px
+      &__item
+        width: 100%
+        &:first-child
+          margin-top: 20px
+      &__link
+        width: 70%
+      &__img
+        height: 100%
+        &::after
+          position: absolute
+          content: ''
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-color: rgba(#000, 0.8)
+      &__frame
+        width: 100%
+        height: 100%
+      &__title
+        position: static
+        display: block
+        font-size: 18px
+        color: aqua
+
+
+@media (max-width: 420px)
+  .portfolio
+    padding: 70px 0
+    &-list
+      grid-row-gap: 100px
+      &__item
+        width: 200px
+        &:first-child
+          margin-top: 40px
+      &__link
+        width: 210px
+      &__img
+        height: 100%
+        width: 200px
+        height: 200px
+      &__frame
+        width: 200px
+        height: 200px
+      &__title
+        position: static
+        display: block
+        font-size: 17px
+        color: aqua
