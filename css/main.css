@@ -2679,6 +2679,10 @@ a {
       background-image: url("../img/blog4.jpg"); }
     .portfolio-list__img_6 {
       background-image: url("../img/blog2.jpg"); }
+    .portfolio-list__img_9 {
+      background-image: url("../img/234.jpg"); }
+    .portfolio-list__img_8 {
+      background-image: url("../img/123.png"); }
   .portfolio-list__frame, .portfolio-list__img {
     display: block;
     width: 62%;
