@@ -60,6 +60,8 @@
 		text-decoration: none
 		padding-bottom: 85px
 		position: relative
+		border-bottom: 1px #454 solid
+
 		&::before
 			content: ' '
 			position: absolute
@@ -80,9 +82,7 @@
 			opacity: 0
 			transition: .4s
 			background-color: #fea100
-		&:nth-child(-n+4)
-			border-bottom: 1px #454 solid
-		&:nth-child(4n)
+		&:nth-child(2n)
 			border-right: none
 		&:hover
 			.team_img

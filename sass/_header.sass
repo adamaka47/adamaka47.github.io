@@ -29,16 +29,16 @@
 	padding-bottom: 50px
 	position: relative
 	z-index: 2
-	&::after
-		content: ''
-		background-image: url('../img/1.png'), url('../img/3.png'), url('../img/2.png')
-		animation: snow 20s linear infinite
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		z-index: -1
+	// &::after
+	// 	content: ''
+	// 	background-image: url('../img/1.png'), url('../img/3.png'), url('../img/2.png')
+	// 	animation: snow 20s linear infinite
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 0
+	// 	width: 100%
+	// 	height: 100%
+	// 	z-index: -1
 	&-top
 		padding-top: 40px
 		display: flex
@@ -272,11 +272,12 @@
 		color: #fea100
 		line-height: 1.6
 		padding-left: 28px
+		font-weight: 300
+		color: #af8
 		.char
 			  visibility: hidden
 			  animation: chars 0s steps(2) forwards
 			  animation-delay: calc(0.05s * var(--char-index))
-			  text-shadow: 0 1px 5px #fea100
 	&-buttons
 		margin-top: 30px
 		display: flex
@@ -403,7 +404,6 @@
 
 	100%
 		visibility: visible
-		color: #af8
 
 
 

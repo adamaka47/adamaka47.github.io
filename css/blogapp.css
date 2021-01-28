@@ -1,9 +1,6 @@
 *, *::after, *::before {
   box-sizing: border-box; }
 
-::-moz-selection {
-  background-color: #fea100; }
-
 ::selection {
   background-color: #fea100; }
 
@@ -48,21 +45,8 @@ body {
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 17, 0.9);
-      -webkit-animation: bganims 20s infinite ease-in-out backwards;
       animation: bganims 20s infinite ease-in-out backwards;
       z-index: -1; }
-
-@-webkit-keyframes bganims {
-  0, 100% {
-    background-color: rgba(0, 0, 17, 0.8); }
-  20% {
-    background-color: rgba(17, 0, 0, 0.7); }
-  40% {
-    background-color: rgba(17, 0, 0, 0.7); }
-  60% {
-    background-color: rgba(0, 0, 17, 0.8); }
-  80% {
-    background-color: rgba(17, 0, 0, 0.99); } }
 
 @keyframes bganims {
   0, 100% {

@@ -2,6 +2,9 @@
 
 document.body.style.overflow = "hidden";
 
+const footerCopy = document.querySelector('.footer-copy .date')
+footerCopy.textContent = new Date().getFullYear()
+
 function wowAnim(elem) {
   document.querySelector(elem).classList.remove("disanim45");
   document.querySelector(elem).classList.add("anim45");
